@@ -10,6 +10,7 @@ import './body.html';
 Template.body.onCreated( function bodyOnCreated() {
   'use strict';
   this.state = new ReactiveDict();
+  Meteor.subscribe('tasks');
 } );
 
 Template.body.helpers( {
